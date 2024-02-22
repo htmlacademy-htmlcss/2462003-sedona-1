@@ -34,10 +34,8 @@
           </a>
           <a class="like" href="#">
             <span class="visually-hidden">В избранном</span>
+            <span class="like-icon">12</span>
           </a>
-          <span class="like-icon">
-            12
-          </span>
           <a class=" button want-here" href="#">
               <span>Хочу сюда!</span>
           </a>
@@ -108,11 +106,24 @@
             </fieldset>
             <fieldset class="slider">
               <legend>Стоимость, ₽:</legend>
-              <input class="price-min" type="number" placeholder="от" name="from">
-              <input class="price-max" type="number" placeholder="до" name="to">
+              <div class="price-wrapper">
+                <div>
+                  <label>
+                    <span>от</span>
+                    <input class="price-min" type="number" placeholder="0" name="from">
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    <span>до</span>
+                    <input class="price-max" type="number" placeholder="9000" name="to">
+                  </label>
+                </div>
+              </div>
               <div class="price-range">
-                <button type="button"></button>
-                <button type="button"></button>
+                <button class="button-low" type="button"></button>
+                <div class="price-filled"></div>
+                <button class="button-high" type="button"></button>
               </div>
             </fieldset>
             <fieldset class="menu-buttons">
@@ -125,29 +136,20 @@
           <header class="cards-header">
             <h2 class="visually-hidden">Результат фильтра</h2>
             <p class="cards-found">Найдено гостиниц: 38</p>
-            <select class="price-filter" name="price-filter">
+            <select class="price-filter" name="price-filter" aria-label="Сортировка по цене">
               <option value="cheap">
                 Сначала дешевые
               </option>
             </select>
             <ul class="cards-layout" aria-label="Вид отображения">
               <li class="cards-layout-grid">
-                <button type="button">
-                  <span class="grid"></span>
-                  <span class="visually-hidden">Таблица</span>
-                </button>
+                <button type="button" class="grid"></button>
               </li>
-              <li class="cards-layout-slide">
-                <button type="button">
-                  <span class="slide"></span>
-                  <span class="visually-hidden">Слайд-шоу</span>
-                </button>
+              <li class="cards-layout-slide" >
+                <button type="button" class="slide"></button>
               </li>
               <li class="cards-layout-list">
-                <button type="button">
-                  <span class="list"></span>
-                  <span class="visually-hidden">Лист</span>
-                </button>
+                <button type="button" class="list"></button>
               </li>
             </ul>
           </header>
@@ -243,21 +245,32 @@
               </li>
             </ul>
           </div>
-          <nav class="pagination">
-            <a class="pagination-active" href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <span>...</span>
-            <a href="#">10</a>
-          </nav>
+          <ul class="pagination">
+            <li>
+              <a class="pagination-active" href="#">1</a>
+            </li>
+            <li>
+              <a href="#">2</a>
+            </li>
+            <li>
+              <a href="#">3</a>
+            </li>
+            <li>
+              <a href="#">4</a>
+            </li>
+            <li>
+              <a href="#">...</a>
+            </li>
+            <li>
+              <a href="#">10</a>
+            </li>
+          </ul>
         </section>
         <section class="subscribe subscribe-catalog">
           <h2 class="subscribe-header">Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post"
-            aria-label="Ввод e-mail для подписки">
-            <input type="email" name="user-email" required placeholder="Ваш e-mail">
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+            <input type="email" name="user-email" required placeholder="Ваш e-mail" aria-label="Ввод e-mail для подписки">
             <button type="submit" class="subscribe-button">Подписаться</button>
           </form>
         </section>
