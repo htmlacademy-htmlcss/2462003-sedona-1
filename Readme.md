@@ -2,7 +2,7 @@
 
 * Студент: [Данила Петров](https://up.htmlacademy.ru/htmlcss/39/user/2462003).
 * Наставник: [Малик Киров](https://htmlacademy.ru/profile/id17217).
-* Сайт: [Мой проект Седона](https://daniilpetrov776.github.io/2462003-sedona-39/)
+* Сайт: [Мой проект Седона](https://daniilpetrov776.github.io/2462003-sedona-1/)
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
