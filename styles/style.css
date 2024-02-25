@@ -57,6 +57,10 @@ body {
   max-height: 64px;
 }
 
+.logo {
+  z-index: 1;
+}
+
 .navigation {
   display: flex;
   flex-wrap: wrap;
@@ -110,6 +114,7 @@ justify-content: flex-end;
   width: 18px;
   height: 17px;
   margin-right: 20px;
+  position: relative;
 }
 
 .like-icon {
@@ -124,6 +129,9 @@ justify-content: flex-end;
   color: #FFFFFF;
   background-color: #7DB54F;
   border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  bottom: 33px;
 }
 
 .button {
@@ -366,6 +374,13 @@ justify-content: flex-end;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.subscribe p {
+  margin: 0;
+  margin-bottom: 54px;
 }
 
 .intrested {
@@ -407,30 +422,37 @@ justify-content: flex-end;
 .subscribe-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .subscribe h2 {
   color: #FFFFFF;
+  text-transform: uppercase;
 }
 
 .subscribe p {
   font-size: 22px;
   line-height: 26px;
   color: #FFFFFF;
+  text-align: center;
 }
 
 .subscribe-form {
   font-family: inherit;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 }
 
 .subscribe input {
   font-family: inherit;
   width: 452px;
   height: 52px;
+  padding: 14px 20px;
   font-size: 18px;
   line-height: 24px;
+  border: none;
+  border-radius: 4px 0 0 4px;
 }
 
 .subscribe-button {
@@ -438,25 +460,29 @@ justify-content: flex-end;
   background-color: #82B3D3;
   color: #FFFFFF;
   width: 232px;
-  height: 56px;
+  height: 52px;
   font-size: 20px;
   line-height: 36px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0 4px 4px 0;
 }
 
 .page-footer {
   display: flex;
   width: 1200px;
   min-height: 120px;
-  justify-content: space-around;
   align-items: center;
+  padding: 40px 70px 30px;
 }
 
 .social-list {
   display: flex;
-  width: 142px;
+  min-width: 142px;
   justify-content: space-between;
   padding: 0;
   list-style: none;
+  margin-right: auto;
 }
 
 .social-vk {
@@ -489,6 +515,7 @@ justify-content: flex-end;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
+  margin-right: auto;
 }
 
 .htmlacademy {
@@ -548,7 +575,11 @@ justify-content: flex-end;
 .menu legend {
   font-size: 20px;
   line-height: 24px;
+  font-weight: 700;
   color: #FFFFFF;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
 .filter {
@@ -565,6 +596,16 @@ justify-content: flex-end;
   margin: 0;
   margin-right: 70px;
   color: #FFFFFF;
+}
+
+.filter-group-list {
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.filter-group-item:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .filter-group:nth-child(2) {
@@ -592,6 +633,7 @@ justify-content: flex-end;
 .price-wrapper {
   max-width: 288px;
   display: flex;
+  margin-bottom: 36px;
 }
 
 .price-wrapper > div {
@@ -602,17 +644,41 @@ justify-content: flex-end;
 .price-min {
   font-family: inherit;
   width: 143px;
-  padding: 0;
+  padding: 12px 20px;
   margin: 0;
   box-sizing: border-box;
+}
+
+.price-min[placeholder] {
+  color: #000000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.price-min::-webkit-inner-spin-button,
+.price-min::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 .price-max {
   font-family: inherit;
   width: 143px;
-  padding: 0;
+  padding: 12px 20px;
   margin: 0;
   box-sizing: border-box;
+}
+
+.price-max[placeholder] {
+  color: #000000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.price-max::-webkit-inner-spin-button,
+.price-max::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 .price-range {
@@ -663,7 +729,11 @@ justify-content: flex-end;
   border: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  min-width: 191px;
+  margin: 0;
+  padding: 0;
+  padding-top: 56px;
 }
 
 .menu-button-filled {
@@ -674,6 +744,11 @@ justify-content: flex-end;
   border-radius: 4px;
   border-width: 0;
   Padding: 8px 50px;
+  margin-bottom: 32px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .menu-button-clear {
@@ -684,6 +759,10 @@ justify-content: flex-end;
   border-radius: 4px;
   border-width: 0;
   Padding: 8px 50px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .cards-header {
