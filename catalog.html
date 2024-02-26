@@ -104,19 +104,15 @@
               </ul>
             </fieldset>
             <fieldset class="slider">
-              <legend>Стоимость, ₽:</legend>
+              <legend class="filter-group-title">Стоимость, ₽:</legend>
               <div class="price-wrapper">
-                <div>
-                  <label>
-                    <span>от</span>
-                    <input class="price-min" type="number" placeholder="0" name="from">
-                  </label>
+                <div class="price-input-wrapper">
+                  <label class="price-label" for="price">от</label>
+                  <input id="price" class="price price-min" type="number" placeholder="0" name="from">
                 </div>
-                <div>
-                  <label>
-                    <span>до</span>
-                    <input class="price-max" type="number" placeholder="9000" name="to">
-                  </label>
+                <div class="price-input-wrapper">
+                  <label class="price-label" for="price">до</label>
+                  <input class="price price-max" type="number" placeholder="9000" name="to">
                 </div>
               </div>
               <div class="price-range">
@@ -266,12 +262,14 @@
           </ul>
         </section>
         <section class="subscribe subscribe-catalog">
-          <h2 class="subscribe-header">Подпишитесь на рассылку</h2>
-          <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input type="email" name="user-email" required placeholder="Ваш e-mail" aria-label="Ввод e-mail для подписки">
-            <button type="submit" class="subscribe-button">Подписаться</button>
-          </form>
+          <div class="subscribe-wrapper">
+            <h2 class="subscribe-header">Подпишитесь на рассылку</h2>
+            <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+              <input type="email" name="user-email" required placeholder="Ваш e-mail" aria-label="Ввод e-mail для подписки">
+              <button type="submit" class="subscribe-button">Подписаться</button>
+            </form>
+          </div>
         </section>
       </main>
       <footer class="page-footer">
