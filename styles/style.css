@@ -631,53 +631,59 @@ justify-content: flex-end;
 }
 
 .price-wrapper {
-  max-width: 288px;
+  min-width: 288px;
   display: flex;
   margin-bottom: 36px;
+  justify-content: space-between;
 }
 
-.price-wrapper > div {
-  max-width: 143px;
+.price-input-wrapper {
+  max-height: 48px;
+  width: 143px;
+  position: relative;
 }
 
+.price-label {
+  position: absolute;
+  left: 106px;
+  top: 15px;
+  color: #00000050;
+}
 
-.price-min {
+.price {
   font-family: inherit;
   width: 143px;
-  padding: 12px 20px;
+  padding: 12px 37px 12px 20px;
   margin: 0;
   box-sizing: border-box;
+  border: none;
+
 }
 
-.price-min[placeholder] {
-  color: #000000;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.price-min::-webkit-inner-spin-button,
-.price-min::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+.price-min {
+  border-radius: 4px 0 0 4px;
 }
 
 .price-max {
-  font-family: inherit;
-  width: 143px;
-  padding: 12px 20px;
-  margin: 0;
-  box-sizing: border-box;
+  border-radius: 0 4px 4px 0;
 }
 
-.price-max[placeholder] {
+.price[placeholder] {
   color: #000000;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
 }
 
-.price-max::-webkit-inner-spin-button,
-.price-max::-webkit-outer-spin-button {
+.price::placeholder {
+  color: #000000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.price::-webkit-inner-spin-button,
+.price::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
@@ -766,9 +772,11 @@ justify-content: flex-end;
 }
 
 .cards-header {
-  padding: 0 70px;
+  padding: 50px 70px 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  min-height: 139px;
 }
 
 .cards-found {
@@ -776,12 +784,26 @@ justify-content: flex-end;
   line-height: 36px;
   font-weight: 700;
   color: #000000;
+  margin: 0;
 }
 
 .price-filter {
   color: #333333;
   background-color: #FFFFFF;
   font-family: inherit;
+  padding: 14px 20px;
+}
+
+.cards-layout {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.cards-layout li:not(:last-child) {
+  margin-right: 8px;
 }
 
 .grid {
@@ -792,6 +814,7 @@ justify-content: flex-end;
   display: block;
   min-width: 48px;
   min-height: 48px;
+  background-color: #FFFFFF;
 }
 
 .slide {
@@ -802,6 +825,7 @@ justify-content: flex-end;
   display: block;
   min-width: 48px;
   min-height: 48px;
+  background-color: #FFFFFF;
 }
 
 .list {
@@ -812,17 +836,12 @@ justify-content: flex-end;
   display: block;
   min-width: 48px;
   min-height: 48px;
-}
-
-.cards-layout {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
+  background-color: #FFFFFF;
 }
 
 .cards {
   padding: 0 70px;
+  margin-bottom: 80px;
 }
 
 .cards-list {
@@ -832,6 +851,8 @@ justify-content: flex-end;
   list-style: none;
   max-width: 1060px;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .card {
@@ -846,6 +867,10 @@ justify-content: flex-end;
   box-shadow: 0 0 4px #00000025;
 }
 
+.card a {
+  text-decoration: none;
+}
+
 .card:not(:nth-child(3n)) {
   margin-right: 20px;
 }
@@ -856,17 +881,25 @@ justify-content: flex-end;
   font-weight: 700px;
   color: #000000;
   text-decoration: none;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .card-wrapper-type {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 300px;
+}
+
+.card-wrapper-type p {
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 .card-type {
   font-size: 18px;
   line-height: 21px;
-  margin-right: auto;
 }
 
 .card-price {
@@ -878,12 +911,18 @@ justify-content: flex-end;
   display: flex;
   max-width: 300px;
   align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
 .card-wrapper-more .button {
   max-width: 140px;
   box-sizing: border-box;
   padding: 8px 26px;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .card-wrapper-more .favourite {
@@ -891,6 +930,8 @@ justify-content: flex-end;
   max-width: 140px;
   box-sizing: border-box;
   padding: 8px 20px;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .card-wrapper-more .favourite-active {
@@ -909,6 +950,8 @@ justify-content: flex-end;
   font-size: 16px;
   line-height: 20px;
   background-color: #F2F2F2;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .card-stars {
@@ -917,6 +960,7 @@ justify-content: flex-end;
   background-repeat: space;
   display: block;
   min-height: 17px;
+  margin: 0;
 }
 
 .card-stars-4 {
@@ -937,6 +981,9 @@ justify-content: flex-end;
   flex-wrap: wrap;
   padding-left: 70px;
   list-style: none;
+  gap: 8px;
+  margin: 0;
+  margin-bottom: 60px;
 }
 
 .pagination a {
@@ -953,7 +1000,6 @@ justify-content: flex-end;
   height: 60px;
   text-align: center;
   vertical-align: baseline;
-  margin-right: 8px;
 }
 
 .pagination .pagination-active {

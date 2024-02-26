@@ -106,17 +106,13 @@
             <fieldset class="slider">
               <legend class="filter-group-title">Стоимость, ₽:</legend>
               <div class="price-wrapper">
-                <div>
-                  <label>
-                    <span>от</span>
-                    <input class="price-min" type="number" placeholder="0" name="from">
-                  </label>
+                <div class="price-input-wrapper">
+                  <label class="price-label" for="price">от</label>
+                  <input id="price" class="price price-min" type="number" placeholder="0" name="from">
                 </div>
-                <div>
-                  <label>
-                    <span>до</span>
-                    <input class="price-max" type="number" placeholder="9000" name="to">
-                  </label>
+                <div class="price-input-wrapper">
+                  <label class="price-label" for="price">до</label>
+                  <input class="price price-max" type="number" placeholder="9000" name="to">
                 </div>
               </div>
               <div class="price-range">
