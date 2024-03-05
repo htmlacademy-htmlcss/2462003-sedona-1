@@ -76,6 +76,15 @@ body {
   list-style: none;
 }
 
+.navigation-item.active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #756257;
+  text-underline-position: under;
+  text-underline-offset: 20px;
+  z-index: 1;
+}
+
 .navigation-list a {
   padding: 20px 16px;
   font-size: 20px;
@@ -141,6 +150,8 @@ justify-content: flex-end;
   text-decoration: none;
   border-radius: 4px;
   Padding: 8px 50px;
+  border: none;
+  cursor: pointer;
 }
 
 .want-here {
@@ -235,7 +246,36 @@ justify-content: flex-end;
   margin: 0 auto 62px auto;
   text-transform: uppercase;
   max-width: 175px;
+  position: relative;
+}
 
+.advantages-item:not(:first-child):not(:last-child) h3::after{
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: solid 2px #0000004D;
+  width: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left:0;
+  top: 86px;
+  text-align: center;
+}
+
+.advantages-item:first-child h3::after,
+.advantages-item:last-child h3::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: solid 2px #FFFFFF4D;
+  width: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left:0;
+  top: 86px;
+  text-align: center;
 }
 
 .advantages-item:first-child  {
@@ -276,9 +316,10 @@ justify-content: flex-end;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 1200px;
+  max-width: 505px;
   min-height: 246px;
   padding: 64px 0;
+  margin: 0 auto;
 }
 
 .please-visit h2 {
@@ -317,37 +358,15 @@ justify-content: flex-end;
   height: 385px;
   padding: 81px 85px;
   background-color: #83B3D31F;
+  position: relative;
 }
 
 .visit-item:nth-child(2n) {
   background-color: #FFFFFF;
 }
 
-.house-icon {
+.visit-item img {
   display: block;
-  background-image: url(../images/house-icon.svg);
-  background-repeat: no-repeat;
-  background-size: 75px 72px;
-  width: 75px;
-  height: 72px;
-}
-
-.burger-icon {
-  display: block;
-  background-image: url(../images/burger-icon.svg);
-  background-repeat: no-repeat;
-  background-size: 74px 70px;
-  width: 74px;
-  height: 70px;
-}
-
-.present-icon {
-  display: block;
-  background-image: url(../images/present-icon.svg);
-  background-repeat: no-repeat;
-  background-size: 64px 76px;
-  width: 64px;
-  height: 76px;
 }
 
 .visit-header {
@@ -404,6 +423,8 @@ justify-content: flex-end;
 .intrested .button {
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .subscribe {
@@ -463,8 +484,10 @@ justify-content: flex-end;
   height: 52px;
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700;
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
   border-radius: 0 4px 4px 0;
 }
 
@@ -555,6 +578,16 @@ justify-content: flex-end;
   margin: 0;
   margin-bottom: 40px;
   list-style: none;
+}
+
+.bread-crums-item:not(:last-child):after {
+  display: inline-block;
+  background-image: url(../images/arrow-right.svg);
+  background-size: 6px 10px;
+  content: "";
+  width: 6px;
+  height: 9px;
+  margin: 0 11px
 }
 
 .bread-crums a {
@@ -726,9 +759,20 @@ justify-content: flex-end;
 }
 
 .control {
+  display: flex;
+  align-items: center;
   font-size: 18px;
   line-height: 23px;
+  max-height: 23px;
   color: #FFFFFF;
+}
+
+.control-input {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  box-sizing: border-box;
 }
 
 .menu-buttons {
@@ -755,6 +799,8 @@ justify-content: flex-end;
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 700;
+  border: none;
+  cursor: pointer;
 }
 
 .menu-button-clear {
@@ -769,6 +815,8 @@ justify-content: flex-end;
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 700;
+  border: none;
+  cursor: pointer;
 }
 
 .cards-header {
@@ -792,6 +840,13 @@ justify-content: flex-end;
   background-color: #FFFFFF;
   font-family: inherit;
   padding: 14px 20px;
+  min-width: 292px;
+  appearance: none;
+  background-image: url(../images/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  border: solid 2px #E5E5E5;
+  border-radius: 4px;
 }
 
 .cards-layout {
@@ -804,6 +859,11 @@ justify-content: flex-end;
 
 .cards-layout li:not(:last-child) {
   margin-right: 8px;
+}
+
+.cards-layout button {
+  border: solid 2px #E5E5E5;
+  border-radius: 4px;
 }
 
 .grid {
@@ -1009,6 +1069,7 @@ justify-content: flex-end;
   height: 60px;
   text-align: center;
   vertical-align: baseline;
+  border-radius: 4px;
 }
 
 .pagination .pagination-active {
