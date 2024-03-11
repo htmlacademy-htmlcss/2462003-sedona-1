@@ -639,6 +639,27 @@ justify-content: flex-end;
   fill: #7561574D;
 }
 
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #F2F2F2CC;
+  z-index: 1;
+}
+
+.modal-aplication {
+  margin: auto;
+  width: 717px;
+  padding: 64px 70px;
+  background-color: #FFFFFF;
+  box-shadow: 0 25px 50px 0 #00000026;
+  border-radius: 30px;
+  position: relative;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -826,6 +847,11 @@ justify-content: flex-end;
 .price::-webkit-inner-spin-button,
 .price::-webkit-outer-spin-button {
   -webkit-appearance: none;
+  margin: 0;
+}
+
+.price[type=number] {
+  -moz-appearance: textfield;
 }
 
 .price-range {
@@ -869,6 +895,7 @@ justify-content: flex-end;
   bottom: 8px;
   border-top:  solid 4px #FFFFFF;
   width: 188px;
+  left: 0;
 }
 
 .price-filled-not {
@@ -1104,6 +1131,7 @@ justify-content: flex-end;
   font-size: 18px;
   line-height: 21px;
   padding: 14px 20px;
+  padding-right: 40px;
   min-width: 292px;
   appearance: none;
   background-image: url(../images/arrow-down.svg);
@@ -1313,6 +1341,7 @@ justify-content: flex-end;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .card-rating {
@@ -1321,15 +1350,18 @@ justify-content: flex-end;
   background-color: #F2F2F2;
   margin: 0;
   text-transform: uppercase;
+  padding: 9px 22px 8px 23px;
 }
 
 .card-stars {
   background-image: url(../images/star.svg);
   background-size: 18px 17px;
   background-repeat: space;
+  background-position: center;
   display: block;
   min-height: 17px;
   margin: 0;
+  height: 17px;
 }
 
 .card-stars-4 {

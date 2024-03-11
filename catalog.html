@@ -107,11 +107,11 @@
               <div class="price-wrapper">
                 <div class="price-input-wrapper">
                   <label class="price-label" for="price">от</label>
-                  <input id="price" class="price price-min" type="number" placeholder="0" name="from">
+                  <input id="price" class="price price-min" type="number" placeholder="0" name="from" value="min-price" required>
                 </div>
                 <div class="price-input-wrapper">
                   <label class="price-label" for="price">до</label>
-                  <input class="price price-max" type="number" placeholder="9000" name="to">
+                  <input class="price price-max" type="number" placeholder="9000" name="to" value="max-price" required>
                 </div>
               </div>
               <div class="price-range">
@@ -134,6 +134,12 @@
             <select class="price-filter" name="price-filter" aria-label="Сортировка по цене">
               <option value="cheap">
                 Сначала дешевые
+              </option>
+              <option value="expensive">
+                Сначала дорогие
+              </option>
+              <option value="popular">
+                Сначала популярные
               </option>
             </select>
             <ul class="cards-layout" aria-label="Вид отображения">
