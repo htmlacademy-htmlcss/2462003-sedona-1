@@ -680,7 +680,7 @@ justify-content: flex-end;
   display: grid;
   width: 577px;
   grid-template-columns: 137px auto;
-  grid-template-rows: 48px 48px 48px 48px 48px 48px 60px;
+  grid-template-rows: auto auto auto auto auto auto auto;
 }
 
 .modal-inputs-wrapper label {
@@ -831,6 +831,7 @@ justify-content: flex-end;
   font-weight: 700;
   height: 48px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-right: 46px;
 }
@@ -1012,6 +1013,10 @@ justify-content: flex-end;
   background-repeat: no-repeat;
   background-position: center;
   margin-right: auto;
+}
+
+.tooltip-button:hover {
+  opacity: 50%;
 }
 
 .tooltip-button:hover  + .tooltip-text {
