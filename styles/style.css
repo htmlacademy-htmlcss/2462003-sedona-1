@@ -201,6 +201,7 @@ body {
   display: inline-block;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 700;
   text-transform: uppercase;
   padding: 8px 34px;
 }
@@ -461,7 +462,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 91px 304px;
+  padding: 96px 304px 91px 304px;
 }
 
 .intrested p {
@@ -591,6 +592,7 @@ body {
   justify-content: space-between;
   padding: 0;
   list-style: none;
+  margin: 0;
   margin-right: auto;
 }
 
@@ -708,6 +710,7 @@ body {
 
 .modal-title-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   min-height: 100px;
   align-items: flex-start;
@@ -1122,6 +1125,7 @@ body {
 
 .bread-crums {
   display: flex;
+  flex-wrap: wrap;
   max-width: 495px;
   padding: 0;
   margin: 0;
@@ -1174,13 +1178,14 @@ body {
 
 .filter {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .filter-group {
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
-  min-width: 150px;
+  width: 150px;
   border: none;
   padding: 0;
   margin: 0;
@@ -1210,6 +1215,7 @@ body {
 .slider {
   display: flex;
   justify-content: flex-start;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   border: none;
@@ -1549,6 +1555,7 @@ body {
 .cards-header {
   padding: 50px 70px 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   min-height: 139px;
@@ -1560,6 +1567,7 @@ body {
   font-weight: 700;
   color: #000000;
   margin: 0;
+  max-width: 310px;
 }
 
 .price-filter {
@@ -1571,6 +1579,7 @@ body {
   padding: 14px 20px;
   padding-right: 40px;
   min-width: 292px;
+  max-width: 310px;
   -webkit-appearance: none;
           appearance: none;
   background-image: url(../images/arrow-down.svg);
@@ -1598,7 +1607,10 @@ body {
   margin: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  max-width: 385px;
+  row-gap: 10px;
 }
 
 .cards-layout li:not(:last-child) {
@@ -1683,7 +1695,6 @@ body {
   padding: 20px;
   border: solid 1px #E6E6E6;
   border-radius: 4px;
-  box-shadow: 0 0 4px #00000025;
 }
 
 .card a {
@@ -1706,6 +1717,7 @@ body {
 
 .card-wrapper-type {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   width: 300px;
@@ -1728,6 +1740,8 @@ body {
 
 .card-wrapper-more {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
   max-width: 300px;
   align-items: center;
   justify-content: space-between;
@@ -1779,6 +1793,8 @@ body {
   width: 300px;
   box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
   justify-content: space-between;
   align-items: center;
 }
@@ -1836,8 +1852,9 @@ body {
   color: #F2F2F2;
   background-color: #82B3D3;
   text-decoration: none;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  max-width: 150px;
+  min-height: 60px;
   text-align: center;
   vertical-align: baseline;
   border-radius: 4px;
@@ -1879,6 +1896,7 @@ body {
 
 .subscribe-catalog {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-image: none;
