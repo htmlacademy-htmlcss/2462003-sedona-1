@@ -4,8 +4,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Гостиницы Седоны</title>
+    <title>Седона. Городок в Аризоне.</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
 
   <body>
@@ -80,7 +81,7 @@
               </ul>
             </fieldset>
             <fieldset class="filter-group">
-              <legend class="filter-group-title">Тип жилья:</legend>
+              <legend class="filter-group-title">Тип Жилья:</legend>
               <ul class="filter-group-list">
                 <li class="filter-group-item">
                   <label class="control radio">
@@ -107,18 +108,22 @@
               <div class="price-wrapper">
                 <div class="price-input-wrapper">
                   <label class="price-label" for="price">от</label>
-                  <input id="price" class="price price-min" type="number" placeholder="0" name="from" value="min-price" required>
+                  <input id="price" class="price price-min" type="number" placeholder="0" name="from" value="0" required>
                 </div>
                 <div class="price-input-wrapper">
                   <label class="price-label" for="price">до</label>
-                  <input class="price price-max" type="number" placeholder="9000" name="to" value="max-price" required>
+                  <input class="price price-max" type="number" placeholder="9000" name="to" value="9000" required>
                 </div>
               </div>
               <div class="price-range">
-                <button class="button-low" type="button"></button>
+                <button class="button-low" type="button">
+                  <span class="visually-hidden">Наименьшая цена.</span>
+                </button>
                 <div class="price-filled-not"></div>
                 <div class="price-filled"></div>
-                <button class="button-high" type="button"></button>
+                <button class="button-high" type="button">
+                  <span class="visually-hidden">Наибольшая цена.</span>
+                </button>
               </div>
             </fieldset>
             <fieldset class="menu-buttons">
@@ -144,20 +149,26 @@
             </select>
             <ul class="cards-layout" aria-label="Вид отображения">
               <li class="cards-layout-grid">
-                <button type="button" class="grid active"></button>
+                <button type="button" class="grid active">
+                  <span class="visually-hidden">Плитка.</span>
+                </button>
               </li>
               <li class="cards-layout-slide" >
-                <button type="button" class="slide"></button>
+                <button type="button" class="slide">
+                  <span class="visually-hidden">Слайды.</span>
+                </button>
               </li>
               <li class="cards-layout-list">
-                <button type="button" class="list"></button>
+                <button type="button" class="list">
+                  <span class="visually-hidden">Лист.</span>
+                </button>
               </li>
             </ul>
           </header>
           <div class="cards">
             <ul class="cards-list">
               <li class="card">
-                <a href="#" tabindex="-1">
+                <a href="#">
                   <img src="images/amara.jpg" width="300" height="212" alt="Вид на звездное небо из каньона">
                 </a>
                 <a href="#" tabindex="-1">
@@ -179,7 +190,7 @@
                 </div>
               </li>
               <li class="card">
-                <a href="#" tabindex="-1">
+                <a href="#">
                   <img src="images/villas.jpg" width="300" height="212" alt="Вид на каньон с радугой">
                 </a>
                 <a href="#" tabindex="-1">
@@ -201,7 +212,7 @@
                 </div>
               </li>
               <li class="card">
-                <a href="#" tabindex="-1">
+                <a href="#">
                   <img src="images/desert.jpg" width="300" height="212" alt="Вид на каньон с густой растительностью">
                 </a>
                 <a href="#" tabindex="-1">
@@ -223,7 +234,7 @@
                 </div>
               </li>
               <li class="card">
-                <a href="#" tabindex="-1">
+                <a href="#">
                   <img src="images/green-tree.jpg" width="300" height="212" alt="Вид на каньон на фоне звёзд">
                 </a>
                 <a href="#" tabindex="-1">
