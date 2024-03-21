@@ -28,22 +28,23 @@
             </li>
           </ul>
         </nav>
-        <nav class="navigation-icons">
+        <div class="icons-wrapper">
           <a class="search-icon" href="#">
-            <span class="visually-hidden">Поиск</span>
+            <span class="visually-hidden">Поиск.</span>
           </a>
           <a class="like" href="#">
-            <span class="visually-hidden">В избранном</span>
+            <span class="visually-hidden">В избранном.</span>
             <span class="like-icon">12</span>
           </a>
-          <a class=" button want-here" href="#">
-              <span>Хочу сюда!</span>
-          </a>
-        </nav>
+          <button type="button" class=" button want-here" href="#">
+              Хочу сюда!
+          </button>
+        </div>
       </header>
       <main class="main-wrapper">
+        <h1 class="visually-hidden">Каталог</h1>
         <section class="menu">
-          <h1>Гостиницы Седоны</h1>
+          <h2>Гостиницы Седоны</h2>
           <ul class="bread-crums">
             <li class="bread-crums-item">
               <a class="bread-crums-home" href="index.html">
@@ -55,7 +56,7 @@
                 Гостиницы
               </a>
           </ul>
-          <h2 class="visually-hidden">Фильтр поиска гостиниц</h2>
+          <span class="visually-hidden">Фильтр поиска гостиниц</span>
           <form class="filter" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="filter-group">
               <legend class="filter-group-title">Инфраструктура:</legend>
@@ -107,12 +108,12 @@
               <legend class="filter-group-title">Стоимость, ₽:</legend>
               <div class="price-wrapper">
                 <div class="price-input-wrapper">
-                  <label class="price-label" for="price">от</label>
-                  <input id="price" class="price price-min" type="number" placeholder="0" name="from" value="0" required>
+                  <label class="price-label" for="price-low">от</label>
+                  <input id="price-low" class="price price-min" type="number" placeholder="0" name="from" value="0" required>
                 </div>
                 <div class="price-input-wrapper">
-                  <label class="price-label" for="price">до</label>
-                  <input class="price price-max" type="number" placeholder="9000" name="to" value="9000" required>
+                  <label class="price-label" for="price-high">до</label>
+                  <input id="price-high" class="price price-max" type="number" placeholder="9000" name="to" value="9000" required>
                 </div>
               </div>
               <div class="price-range">
@@ -283,8 +284,11 @@
             <h2 class="subscribe-header">Подпишитесь на рассылку</h2>
             <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-              <input type="email" name="user-email" required placeholder="Ваш e-mail" aria-label="Ввод e-mail для подписки">
-              <button type="submit" class="subscribe-button">Подписаться</button>
+              <fieldset>
+                <label class="subscribe-label" for="email"></label>
+                <input id="email" type="email" name="user-email" required placeholder="Ваш e-mail" aria-label="Ввод e-mail для подписки">
+                <button type="submit" class="subscribe-button">Подписаться</button>
+              </fieldset>
             </form>
           </div>
         </section>

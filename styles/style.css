@@ -67,6 +67,14 @@ body {
   position: absolute;
 }
 
+.logo:hover {
+  opacity: 60%;
+}
+
+.logo:active {
+  opacity: 80%;
+}
+
 .navigation {
   display: flex;
   flex-wrap: wrap;
@@ -114,7 +122,16 @@ body {
   text-decoration: none;
 }
 
-.navigation-icons {
+.navigation-link:hover {
+  opacity: 60%;
+}
+
+.navigation-link:active {
+  opacity: 80%;
+}
+
+
+.icons-wrapper {
   min-width: 268px;
   display: flex;
   align-items: center;
@@ -122,6 +139,14 @@ body {
   flex-wrap: wrap;
   row-gap: 10px;
 }
+
+.icons-wrapper a:hover {
+opacity: 60%;
+}
+
+.icons-wrapper a:active {
+  opacity: 80%;
+  }
 
 .search-icon {
   display: inline-block;
@@ -193,6 +218,7 @@ body {
 
 .button:disabled {
   opacity: 10%;
+  pointer-events: none;
 }
 
 .want-here {
@@ -515,6 +541,18 @@ body {
   row-gap: 10px;
   justify-content: center;
   align-items: flex-end;
+}
+
+.subscribe-form fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: flex-end;
   margin-bottom: 5px;
 }
 
@@ -568,6 +606,7 @@ body {
 .menu-button-filled:disabled,
 .button.favourite:disabled {
   opacity: 10%;
+  pointer-events: none;
 }
 
 .page-footer {
@@ -1126,7 +1165,7 @@ body {
   padding: 35px 70px 69px;
 }
 
-.menu h1 {
+.menu h2 {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
@@ -1138,11 +1177,13 @@ body {
 .bread-crums {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   max-width: 495px;
   padding: 0;
   margin: 0;
   margin-bottom: 40px;
   list-style: none;
+  font-size: 16px;
 }
 
 .bread-crums-item:not(:last-child)::after {
@@ -1156,7 +1197,7 @@ body {
   height: 9px;
   margin: 0 6px 0 11px;
   left: -4px;
-  bottom: 2px;
+  bottom: 1px;
 }
 
 .bread-crums a {
@@ -1176,7 +1217,7 @@ body {
 
 .bread-crums-home {
   position: relative;
-  bottom: 2px;
+  bottom: 0;
   display: inline-block;
   background-image: url("../images/home-icon.svg");
   width: 12px;
@@ -1572,6 +1613,7 @@ body {
 
 .menu-button-clear:disabled {
   opacity: 10%;
+  pointer-events: none;
 }
 
 .cards-header {
@@ -1624,6 +1666,7 @@ body {
 
 .price-filter:disabled {
   opacity: 30%;
+  pointer-events: none;
 }
 
 .cards-layout {
@@ -1811,6 +1854,7 @@ body {
 
 .favourite-active:disabled {
   opacity: 10%;
+  pointer-events: none;
 }
 
 .card-wrapper-stars {
